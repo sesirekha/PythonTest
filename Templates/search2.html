@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+    <title>Employees</title>
+</head>
+    <div class="container">
+        <h2><b>Employee details</b></h2>
+        </br>
+  <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>designation</th>
+        <th>Address</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+	{% for row in search_employee %}
+      <tr>
+        <td> {{ row.name }}</td>
+        <td> {{ row.designation }}</td>
+        <td> {{ row.address }}</td>
+		<td> {{ row.phone }}</td>
+      </tr>
+	  {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+</html>
